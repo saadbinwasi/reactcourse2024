@@ -1,0 +1,18 @@
+{
+
+    "blogs": [
+    {
+        "title": "my new website",
+         "body": "lorem ipsum...", 
+         "author": "mario",
+          "id": 1
+    },
+    {
+        "title": "Zero to 1",
+         "body": "lorem ipsum...",
+        "author": "saad" ,
+         "id": 2
+    }
+
+    ]
+}
