@@ -1,27 +1,26 @@
-import { useState, useEffect } from 'react';
 import './App.css';
+import Home from './Home';
 import Navbar from './Navbar';
-import Listing from './Listing';
-import useFetch from './UseFetch';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 
 
 function App() {
 
-  const { data: blogs, isPending } = useFetch('http://localhost:8000/blogs');
+
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
 
-
-      <Navbar />
-
-      <div className='content' >
-        {isPending && <div>Loading...</div>}
-        {blogs && <Listing blogs={blogs} title="All blogs" />}
-        {blogs && <Listing blogs={blogs.filter((blog) => blog.author === 'sabih')} title="sabih blogs" />}
-
+        <Navbar />
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
