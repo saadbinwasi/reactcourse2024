@@ -12,6 +12,12 @@
          "body": "lorem ipsum...",
         "author": "saad" ,
          "id": 2
+    },
+    {
+        "title": "worryless mind",
+         "body": "lorem ipsum...",
+        "author": "sabih" ,
+         "id": 3
     }
 
     ]

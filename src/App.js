@@ -8,18 +8,21 @@ import Listing from './Listing';
 function App() {
 
   const[name,setName] = useState('SAAD')
-const [blogs,setBlog] = useState()
+const [blogs,setBlog] = useState(null)
   
-const handleDelete = (id) => {
+// const handleDelete = (id) => {
 
-  const newBlog = blogs.filter(blog => blog.id !== id)
-    setBlog(newBlog);
+//   const newBlog = blogs.filter(blog => blog.id !== id)
+//     setBlog(newBlog);
 
-}
+// }
 
 useEffect(() => {
-console.log("useEffects ran")
-console.log(blogs)
+fetch('http://localhost:8000/blogs').then(res => {
+     return res.json();
+}).then((data => {
+  setBlog(data)
+}))
 },[])
 
 useEffect(() => {
@@ -37,8 +40,8 @@ useEffect(() => {
         <h1>{name}</h1>
         <button onClick={() => setName('KHAN')}>change name</button>
 
-  <Listing blogs={blogs} title="All blogs" handleDelete={handleDelete} />
-  <Listing blogs={blogs.filter((blog) => blog.author === 'sabih')} title="sabih blogs" />
+{ blogs && <Listing blogs={blogs} title="All blogs" />}
+ { blogs &&  <Listing blogs={blogs.filter((blog) => blog.author === 'sabih')} title="sabih blogs" />}
 
       
 
