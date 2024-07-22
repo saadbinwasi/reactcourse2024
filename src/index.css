@@ -26,3 +26,25 @@ font-size: 20px;
 
 
 }
+
+
+.App {
+  width: 100%;
+
+}
+
+.content{
+  width: 100%;
+  margin-top: 100px;
+
+
+
+}
+
+.blog{
+
+ padding: 50px;
+  text-align: center;
+  background-color: grey;
+  
+}

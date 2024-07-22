@@ -1,32 +1,43 @@
+import { useState } from 'react';
 import './App.css';
 import Navbar from './Navbar';
 
 
 function App() {
-  const handleClick = (e) => {
-    console.log('hello',e.target.value)
-  }
+const [blogs,setBlog] = useState([
+  {title: 'my new website', body: 'lorem ipsum...', author: 'mario' , id: 1},
+  {title: 'Zero to 1', body: 'lorem ipsum...', author: 'saad' , id: 1},
+  {title: 'the worry free mind', body: 'lorem ipsum...', author: 'sabih' , id: 1},
+])
+  
 
 
-  const handleClickagain = (name) => {
-    console.log('hello' + name)
-  }
+
   return (
     <div className="App">
-      <Navbar/>
-    <div className='content'>
+      <Navbar />
 
-      <h1>Content</h1>
+      <h1>Blogs</h1>
+      <div className='content' >
 
-      <button onClick={handleClick}>click me</button>
-      <button onClick={() => {
-        handleClickagain('saad')}}>click me again</button>
+  
+
+        {blogs.map((blog) => (
+          <div className='blog' key={blog.id}>
+          <h2>TITLE: {blog.title}</h2>
+          <p>Body:{blog.body}</p>
+          <p>Written by: {blog.author}</p>
+          </div>
+        ))}
+
     
-    
-    
+
+
+
+
       </div>
     </div>
   );
-} 
+}
 
 export default App;
