@@ -1,24 +1,34 @@
 {
-
-    "blogs": [
+  "blogs": [
     {
-        "title": "my new website",
-         "body": "lorem ipsum...", 
-         "author": "mario",
-          "id": 1
+      "title": "my new website",
+      "body": "lorem ipsum...",
+      "author": "mario",
+      "id": "1"
     },
     {
-        "title": "Zero to 1",
-         "body": "lorem ipsum...",
-        "author": "saad" ,
-         "id": 2
+      "title": "Zero to 1",
+      "body": "lorem ipsum...",
+      "author": "saad",
+      "id": "2"
     },
     {
-        "title": "worryless mind",
-         "body": "lorem ipsum...",
-        "author": "sabih" ,
-         "id": 3
+      "title": "worryless mind",
+      "body": "lorem ipsum...",
+      "author": "sabih",
+      "id": "3"
+    },
+    {
+      "id": "476e",
+      "title": "hello ninja",
+      "body": "saad bin wasi",
+      "author": "sabih"
+    },
+    {
+      "id": "a6f2",
+      "title": "ali",
+      "body": "hehe",
+      "author": "sabih"
     }
-
-    ]
+  ]
 }
