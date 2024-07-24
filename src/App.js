@@ -1,4 +1,5 @@
 import './App.css';
+import BlogListDetail from './BlogListDetail';
 import Create from './Create';
 import Home from './Home';
 import Navbar from './Navbar';
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route  path="/create">
             <Create />
+          </Route>
+          <Route  path="/blogs/:id">
+            <BlogListDetail />
           </Route>
         </Switch>
       </div>
