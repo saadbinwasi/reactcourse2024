@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 function Navbar() {
   return (
@@ -7,11 +8,8 @@ function Navbar() {
         <h1 className='logo'>The Dojo Blog</h1> 
 
         <div className='links'>
-            <a href='/'>Home</a>
-            <a href='/'>Contacts</a>
-            <a href='/'>Home</a>
-            <a href='/'>About Us</a>
-            <a href='/' style={{color: "green"}}>About Us</a>
+            <Link to='/'>Home</Link>
+            <Link to='/create' >New Blog</Link>
         </div>
 
   
