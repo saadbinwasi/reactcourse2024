@@ -10,7 +10,7 @@ function Listing(props) {
         {props.blogs.map((blog) => (
           
           <div className='blog' key={blog.id}>
-            <Link to={`/blogs/:${blog.id}`}>
+            <Link to={`/blogs/${blog.id}`}>
           <h2>TITLE: {blog.title}</h2>
           <p>Body:{blog.body}</p>
           <p>Written by: {blog.author}</p>

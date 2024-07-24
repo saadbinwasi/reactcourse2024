@@ -3,7 +3,7 @@ import Listing from './Listing';
 import useFetch from './UseFetch';
 
 function Home() {
-const { data: blogs, isPending } = useFetch('http://localhost:8000/blogs');
+const { data: blogs, isPending } = useFetch('http://localhost:8060/blogs');
   return (
     <div className='content' >
     {isPending && <div>Loading...</div>}
